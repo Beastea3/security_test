@@ -8,11 +8,9 @@ server.bind((bind_ip, bind_port))
 
 while True:
     print 'Waiting for message'
-    print 'received from and returned to:'
     data, addr = server.recvfrom(2046)
-    print 'received from and returned to:'
     server.sendto(data, addr)
-    print 'received from and returned to:'
+    print 'received from and returned to:', addr
 
 
 
